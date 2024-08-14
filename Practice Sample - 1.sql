@@ -52,6 +52,11 @@ VALUES
 (11, 'Mark', 'Brendanawicz', 'City Planner', 57000, 3),
 (12, 'Craig', 'Middlebrooks', 'Parks Director', 65000,1);
 
+-- Later Addition, Special Test Case - Starts
+INSERT INTO `parks_and_recreation`.employee_demographics (employee_id, first_name, last_name, age, gender, birth_date)
+VALUES
+(13,'Leslie', 'Knope', 44, 'Female','1979-09-25');
+-- Ends
 
 CREATE TABLE parks_departments (
   department_id INT NOT NULL AUTO_INCREMENT,
