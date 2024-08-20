@@ -19,4 +19,4 @@ This repository provides a collection of SQL queries, code explanations, and pra
 1. Clone the repository:
    ```bash
    git clone https://github.com/Sanjaya-Samudra/DBMS-Practices.git
-   cd sql-practice
+
