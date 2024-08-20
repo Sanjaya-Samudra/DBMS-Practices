@@ -1,0 +1,18 @@
+1.
+select * from `parks_and_recreation`.employee_demographics;
+	This code of line scan the whole table before execute.
+	`parks_and_recreation` this referes to which database what we 		search for.
+
+2.
+select age from `parks_and_recreation`.employee_demographics;
+	Specifically mention which column need to scan rather than 		whole table.
+
+3.
+Order of executing DBMS line;
+	PEMDAS Method
+	P - Parentheses()
+	E - Exponents
+	M - Multiplication
+	D - Division
+	A - Addition
+	S - Subtraction
