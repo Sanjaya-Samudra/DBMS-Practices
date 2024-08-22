@@ -16,3 +16,35 @@ Order of executing DBMS line;
 	D - Division
 	A - Addition
 	S - Subtraction
+
+	In here M/D have same priority when execution, happens also 	for A/D.
+
+	When executing single lines in workbench, semicolon is not 	required. Only valid if there only one statement, not valid 	for multiple statements.
+
+4.
+select distinct first_name from `parks_and_recreation`.employee_demographics;
+
+	This provide details(column name only) with first name only.
+
+5.
+select distinct gender from `parks_and_recreation`.employee_demographics;
+
+	Provide with all distinct values regarding column gender.
+	As we know if this happens normally output will be Male or 	Female.
+
+6.
+select distinct first_name,gender from `parks_and_recreation`.employee_demographics;
+
+	This provide first name with his/her own gender. Getting only 	distinct values.
+
+7.
+INSERT INTO `parks_and_recreation`.employee_demographics (employee_id, first_name, last_name, age, gender, birth_date)
+VALUES
+(13,'Leslie', 'Knope', 44, 'Female','1979-09-25');
+
+	In this case we are adding a another Leslie of above details.
+
+8.
+select first_name,gender from `parks_and_recreation`.employee_demographics where first_name='Leslie';
+
+	When we ask to give the details of Leslie, we are getting out 		two results, that's because there were two when the command 		execution happens.
