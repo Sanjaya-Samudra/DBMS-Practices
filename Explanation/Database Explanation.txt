@@ -48,3 +48,25 @@ VALUES
 select first_name,gender from `parks_and_recreation`.employee_demographics where first_name='Leslie';
 
 	When we ask to give the details of Leslie, we are getting out 		two results, that's because there were two when the command 		execution happens.
+
+9.
+select first_name,gender from `parks_and_recreation`.employee_demographics where first_name !='Leslie';
+
+	This provide with all details except the details of Leslie.
+
+
+SELECT *
+FROM employee_demographics
+WHERE birth_date > '1985-01-01' and age>35;
+
+SELECT *
+FROM employee_demographics
+WHERE birth_date > '1985-01-01' and age>=35;
+
+10.
+
+SELECT *
+FROM employee_demographics
+WHERE first_name LIKE 'a%';
+
+	This gives like, from above table give the details of first name that begin with a. Here in this case whatever after 'a' is not matter only checks the begin character/word.
