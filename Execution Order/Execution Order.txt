@@ -1,0 +1,10 @@
+Question: 
+
+SELECT customer_id, first_name, last_name
+FROM customers;
+ 
+Answer:
+ 
+1. FROM: The customers table is accessed to retrieve all rows.
+2. SELECT: The specified columns (customer_id, first_name, last_name) 	are selected from the
+ 	retrieved rows.
