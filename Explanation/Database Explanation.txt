@@ -70,3 +70,40 @@ FROM employee_demographics
 WHERE first_name LIKE 'a%';
 
 	This gives like, from above table give the details of first name that begin with a. Here in this case whatever after 'a' is not matter only checks the begin character/word.
+
+11.
+
+SELECT *
+FROM employee_demographics
+WHERE first_name LIKE 'a__';
+	This seek for first names that begin with 'a' and after that only with two characters. That means whatever result we got, it has only total of three characters. Basically That means we are seeking for first names that begin with 'a' and must have any two characters to make it to have a name of length 3 in this case.
+
+12.
+
+SELECT *
+FROM employee_demographics
+WHERE first_name LIKE 'a___%';
+	This gives the first name begin with 'a' containing total of four characters is a must and after that whatever number of characters.
+
+13.
+
+SELECT gender, AVG(age)
+FROM employee_demographics
+GROUP BY gender;
+	Provide you with the average of age, respected to gender wise.
+
+14.
+
+SELECT *
+FROM employee_demographics
+ORDER BY first_name;
+	Select * defines to select all.
+	Order by first name according to ascending order. ORDER BY key word by default works to arrange content in ascending order.
+
+15.
+
+SELECT *
+FROM employee_demographics
+ORDER BY first_name DESC;
+	We are making order of names in descending order. In this case we are making a command to make the order descending.
+
