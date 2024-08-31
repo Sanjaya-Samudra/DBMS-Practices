@@ -4,11 +4,11 @@ Welcome to my repository dedicated to SQL queries, code explanations, and practi
 
 ## Table of Contents
 
-1. [Introduction](#introduction)
-2. [Setup Instructions](#setup-instructions)
-3. [Code Examples](#code-examples)
-4. [SQL Queries](#sql-queries)
-5. [Practice Exercises](#practice-exercises)
+1. [Setup Instructions]
+2. [Code Examples]
+3. [SQL Queries]
+4. [Code Explanations]
+
 
 ## Introduction
 
