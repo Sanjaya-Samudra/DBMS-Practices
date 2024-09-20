@@ -1,10 +1,12 @@
 1.
 select * from `parks_and_recreation`.employee_demographics;
+
 	This code of line scan the whole table before execute.
 	`parks_and_recreation` this referes to which database what we search for.
 
 2.
 select age from `parks_and_recreation`.employee_demographics;
+
 	Specifically mention which column need to scan rather than whole table.
 
 3.
@@ -22,22 +24,26 @@ Order of executing DBMS line;
 	When executing single lines in workbench, semicolon is not required. Only valid if there only one statement, not valid for multiple statements.
 
 4.
+
 select distinct first_name from `parks_and_recreation`.employee_demographics;
 
 	This provide details(column name only) with first name only.
 
 5.
+
 select distinct gender from `parks_and_recreation`.employee_demographics;
 
 	Provide with all distinct values regarding column gender.
 	As we know if this happens normally output will be Male or Female.
 
 6.
+
 select distinct first_name,gender from `parks_and_recreation`.employee_demographics;
 
 	This provide first name with his/her own gender. Getting only distinct values.
 
 7.
+
 INSERT INTO `parks_and_recreation`.employee_demographics (employee_id, first_name, last_name, age, gender, birth_date)
 VALUES
 (13,'Leslie', 'Knope', 44, 'Female','1979-09-25');
@@ -45,11 +51,13 @@ VALUES
 	In this case we are adding a another Leslie of above details.
 
 8.
+
 select first_name,gender from `parks_and_recreation`.employee_demographics where first_name='Leslie';
 
 	When we ask to give the details of Leslie, we are getting out two results, that's because there were two when the command execution happens.
 
 9.
+
 select first_name,gender from `parks_and_recreation`.employee_demographics where first_name !='Leslie';
 
 	This provide with all details except the details of Leslie.
@@ -76,6 +84,7 @@ WHERE first_name LIKE 'a%';
 SELECT *
 FROM employee_demographics
 WHERE first_name LIKE 'a__';
+
 	This seek for first names that begin with 'a' and after that only with two characters. That means whatever result we got, it has only total of three characters. Basically That means we are seeking for first names that begin with 'a' and must have any two characters to make it to have a name of length 3 in this case.
 
 12.
@@ -83,6 +92,7 @@ WHERE first_name LIKE 'a__';
 SELECT *
 FROM employee_demographics
 WHERE first_name LIKE 'a___%';
+
 	This gives the first name begin with 'a' containing total of four characters is a must and after that whatever number of characters.
 
 13.
@@ -90,6 +100,7 @@ WHERE first_name LIKE 'a___%';
 SELECT gender, AVG(age)
 FROM employee_demographics
 GROUP BY gender;
+
 	Provide you with the average of age, respected to gender wise.
 
 14.
@@ -97,6 +108,7 @@ GROUP BY gender;
 SELECT *
 FROM employee_demographics
 ORDER BY first_name;
+
 	Select * defines to select all.
 	Order by first name according to ascending order. ORDER BY key word by default works to arrange content in ascending order.
 
@@ -105,5 +117,55 @@ ORDER BY first_name;
 SELECT *
 FROM employee_demographics
 ORDER BY first_name DESC;
+
 	We are making order of names in descending order. In this case we are making a command to make the order descending.
+
+16.
+
+SELECT *
+FROM employee_demographics
+ORDER BY gender, age;
+
+	In here first it done, order by gender. Let's see what happens if we change the coulmn locations.
+
+SELECT *
+FROM employee_demographics
+ORDER BY age, gender;
+
+	Here order by happens with respect to age. That means it depends on first come attribute.
+
+17.
+
+Where VS Having (With 'GROUP BY' we can't check another condition with WHERE, in this case we are using HAVING condition)
+
+SELECT gender, AVG(age)
+FROM employee_demographics
+WHERE AVG(age) > 40
+GROUP BY gender
+
+	Gives no output. Error.
+
+SELECT gender, AVG(age)
+FROM employee_demographics
+GROUP BY gender
+HAVING AVG(age) > 40
+;
+
+	Gives error, cannot identify SELECT key word.
+
+SELECT gender, AVG(age) as AVG_age
+FROM employee_demographics
+GROUP BY gender
+HAVING AVG_age > 40
+;
+
+	Provide with correct value, 'as' keyword is used for this reason.
+
+18.
+
+SELECT *
+FROM employee_demographics
+LIMIT 3;
+
+	Provide me with only first three.
 
