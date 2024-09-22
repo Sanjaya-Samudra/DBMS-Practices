@@ -169,3 +169,41 @@ LIMIT 3;
 
 	Provide me with only first three.
 
+19.
+
+SELECT *
+FROM employee_demographics
+ORDER BY first_name
+LIMIT 3;
+
+	Order by first name and limit to give only first three.
+
+20.
+
+SELECT *
+FROM employee_demographics
+ORDER BY first_name
+LIMIT 3,2;
+
+	What does this gives is after the first three, provide the next two excluding 3rd position. That means provide the 4th and 5th position first names after order by.
+
+21.
+
+SELECT *
+FROM employee_demographics
+ORDER BY first_name
+LIMIT 3,3;
+
+	This gives next three after the first three.
+
+22.
+
+-- we can use the keyword AS to specify we are using an Alias
+-- Use two hypons to comment a DBMS command/word
+
+SELECT gender, AVG(age) AS Avg_age
+FROM employee_demographics
+GROUP BY gender
+;
+	In this case tempory table is created as 'Avg_age' instead of age.
+
