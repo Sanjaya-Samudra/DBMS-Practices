@@ -207,3 +207,42 @@ GROUP BY gender
 ;
 	In this case tempory table is created as 'Avg_age' instead of age.
 
+23.
+
+-- Summary of what we learn in one code
+
+SELECT DISTINCT dept_id, COUNT(*) 
+FROM employee_salary 
+WHERE salary > 30000 
+GROUP BY dept_id 
+HAVING COUNT(*) > 1
+ORDER BY dept_id ASC 
+LIMIT 1;
+
+Process of execution
+	1. FROM
+	2. WHERE
+	3. GROUP BY
+	4. HAVING
+	5. SELECT
+	6. DISTINCT (Remove Duplicates)
+	7. ORDER BY (Ascending in this case)
+	8. LIMIT 1
+
+Execution Order Explained:
+
+FROM employee_salary: The query begins by selecting from the employee_salary table.
+
+WHERE salary > 30000: This condition filters the rows to include only those employees whose salary exceeds 30,000.
+
+GROUP BY dept_id: The filtered results are then grouped by dept_id. This means that for each unique department, a separate group is created.
+
+COUNT(*): Within each group (each department), the query counts the number of employees.
+
+HAVING COUNT(*) > 1: This clause filters the grouped results, retaining only those departments that have more than one employee with a salary greater than 30,000.
+
+SELECT DISTINCT dept_id, COUNT(*): At this point, the query selects distinct department IDs along with the count of employees who meet the criteria.
+
+ORDER BY dept_id ASC: The results are sorted in ascending order based on the dept_id.
+
+LIMIT 1: Finally, the query limits the output to just one record, which will be the first department (in terms of department ID) that meets all the above criteria.
