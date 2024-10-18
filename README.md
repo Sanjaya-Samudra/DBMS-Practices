@@ -20,3 +20,9 @@ This repository provides a collection of SQL queries, code explanations, and pra
    ```bash
    git clone https://github.com/Sanjaya-Samudra/DBMS-Practices.git
 
+## Code Examples
+
+## SQL Queries
+
+## Code Explanations
+
